@@ -1,40 +1,71 @@
+:root {
+  --title-color: rgb(255, 251, 0);
+  --gold: #fac2097e;
+  --red: #fa2d097e;
+  --text-color: #1a1a1a;
+  --border-color: #C2C2C2;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
-  color: #1a1a1a;
+  color: var(--text-color);
   /*background-color: #e9f2fc;*/
   background-image: url("../assets/backgroundcss.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 h1{
-  color: rgb(255, 251, 0);
+  color: var(--title-color);
 }
 
 .projet {
-  border: #C2C2C2 solid 2px;
+  border: var(--border-color) solid 2px;
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
 }
 
 .formation {
-  border: #C2C2C2 solid 2px;
+  background-color: var(--red);
+  border: var(--border-color) solid 2px;
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
 }
 
 header {
-  background-color: #fac2097e;
+  background-color: var(--gold);
   border-radius: 10px;
   padding: 10px;
   margin : 10px;
 }
 
-nav a {
-  color: #fcfcfc;
+button {
+  background-color: var(--gold);
+  color: #000000;
+  border: None;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--red);
+  color: #000000;
+  border: None;
+}
+
+a {
+  color: #000000;
+}
+
+a:hover {
+  color: var(--gold);
 }
 
 img {
   border-radius: 50%;
-  border: 2px solid #C2C2C2;
+  border: 2px solid var(--border-color);
 }
