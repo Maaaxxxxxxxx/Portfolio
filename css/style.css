@@ -5,6 +5,8 @@
   --primary-hover: #102A43;
   --border: #DEE2E6;
   --white: #FFFFFF;
+  --box-border: rgba(255, 255, 255, 0.2);
+  --box-background: rgba(255, 255, 255, 0.08);
 }
 
 body {
@@ -32,7 +34,8 @@ h3{
 }
 
 .projet {
-  border: var(--border) solid 2px;
+  border: var(--box-border) solid 2px;
+  background-color: var(--box-background);
   border-radius: 10px;
   margin: 50px;
   padding: 20px;
@@ -52,8 +55,8 @@ li {
 }
 
 .formation {
-  background-color: var(--red);
-  border: var(--border) solid 2px;
+  background-color: var(--box-background);
+  border: var(--box-border) solid 2px;
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
@@ -96,4 +99,78 @@ a:hover {
 img {
   border-radius: 50%;
   border: 2px solid var(--border);
+}
+
+.contact {
+  min-height: 100px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact h1 {
+  color: var(--text-primary);
+  margin: 10px;
+}
+
+.contact main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.box-contact {
+  width: min(100%, 640px);
+  padding: 2rem;
+  box-sizing: border-box;
+  border-radius: 16px;
+  
+}
+
+.box-contact h1 {
+  margin: 0 0 1rem;
+}
+
+.box-contact ul {
+  padding: 0;
+}
+
+.box-contact form {
+  display: grid;
+  gap: 1rem;
+}
+
+.champ-contact {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.champ-contact input,
+.champ-contact select,
+.champ-contact textarea {
+  width: 100%;
+  padding: 0.7rem;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+}
+
+.champ-contact textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.box-contact button {
+  justify-self: start;
+  color: var(--white);
+}
+
+@media (max-width: 480px) {
+  .contact-card {
+    padding: 1.5rem;
+  }
 }
